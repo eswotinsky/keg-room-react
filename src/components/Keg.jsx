@@ -9,9 +9,9 @@ function Keg(props){
             border: 2px solid black;
             background-color: ghostwhite;
             display: inline-block;
-            margin: 1%;
+            margin: 1% 7.5% 1% 5%;
             height: 5%;
-            width: 20%;
+            width: 10%;
             padding: 1%;
             text-align:center;
           }
@@ -22,9 +22,10 @@ function Keg(props){
       <h3>{props.name}</h3>
       <h4>{props.brand}</h4>
       <hr/>
-      <p>${props.price}/pint</p>
-      <hr/>
       <p>{props.alcoholContent}% ABV</p>
+      <hr/>
+      <p>${props.price}/pint</p>
+      <p>{props.pintsLeft} pints left</p>
     </div>
   );
 }
@@ -33,7 +34,8 @@ Keg.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  alcoholContent: PropTypes.string.isRequired
+  alcoholContent: PropTypes.string.isRequired,
+  pintsLeft: PropTypes.number.isRequired
 };
 
 export default Keg;

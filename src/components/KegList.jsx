@@ -6,64 +6,73 @@ var masterKegList = [
     name: 'Beer 1',
     brand: 'Brand',
     price: 5,
-    alcoholContent: 5.5
+    alcoholContent: 5.5,
+    pintsLeft:124
   },
   {
     name: 'Beer 2',
     brand: 'Brand',
     price: 6,
-    alcoholContent: 7.9
+    alcoholContent: 7.9,
+    pintsLeft:124
   },
   {
     name: 'Beer 3',
     brand: 'Brand',
     price: 4.5,
-    alcoholContent: 4.8
+    alcoholContent: 4.8,
+    pintsLeft:124
   },
   {
     name: 'Beer 4',
     brand: 'Brand',
     price: 4.5,
-    alcoholContent: 4.8
+    alcoholContent: 4.8,
+    pintsLeft:124
   },
   {
     name: 'Beer 5',
     brand: 'Brand',
     price: 4.5,
-    alcoholContent: 4.8
+    alcoholContent: 4.8,
+    pintsLeft:124
   },
   {
     name: 'Beer 6',
     brand: 'Brand',
     price: 4.5,
-    alcoholContent: 4.8
+    alcoholContent: 4.8,
+    pintsLeft:124
   },
   {
     name: 'Beer 7',
     brand: 'Brand',
     price: 4.5,
-    alcoholContent: 4.8
+    alcoholContent: 4.8,
+    pintsLeft:124
   },
   {
     name: 'Beer 8',
     brand: 'Brand',
     price: 4.5,
-    alcoholContent: 4.8
+    alcoholContent: 4.8,
+    pintsLeft:124
   }
 ];
 
 function KegList(){
   return (
     <div>
-       {masterKegList.map((keg, index) =>
-         <Keg name={keg.name}
-           brand={keg.brand}
-           price={keg.price}
-           alcoholContent={keg.alcoholContent}
-           key={index}/>
-       )}
+      {masterKegList.map((keg, index) =>
+        <Keg name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholContent={keg.alcoholContent}
+          pintsLeft={keg.pintsLeft}
+          key={index}/>
+      )}
 
-     </div>
+    </div>
   );
 }
 

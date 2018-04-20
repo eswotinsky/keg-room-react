@@ -7,7 +7,7 @@ function Header(){
           div.header {
             background-color:goldenrod;
             text-align:center;
-            font-family:cursive;
+            font-family:sans-serif;
           }
         `}
       </style>
