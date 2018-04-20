@@ -39,8 +39,8 @@ module.exports = {
         options: {
           emitWarning: true,
           configFile: "./.eslintrc.json"
-          }
-        },
+        }
+      },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -54,6 +54,16 @@ module.exports = {
             "react-hot-loader/babel"
           ]
         }
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
       }
     ]
   },
@@ -62,10 +72,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-     template:'template.ejs',
-     appMountId: 'react-app-root',
-     title: 'The Tap Room',
-     filename: resolve(__dirname, "build", "index.html"),
-   }),
+      template:'template.ejs',
+      appMountId: 'react-app-root',
+      title: 'The Keg Room',
+      filename: resolve(__dirname, "build", "index.html"),
+    }),
   ]
 };

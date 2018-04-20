@@ -1,4 +1,5 @@
 import React from 'react';
+import kegRoomLogo from '../assets/keg.jpg';
 
 function Header(){
   return (
@@ -9,8 +10,12 @@ function Header(){
             text-align:center;
             font-family:sans-serif;
           }
+          img {
+            width:10%;
+          }
         `}
       </style>
+      <img src={kegRoomLogo} />
       <h1>The Keg Room</h1>
     </div>
   );
