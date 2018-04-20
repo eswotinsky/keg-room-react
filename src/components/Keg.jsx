@@ -9,14 +9,14 @@ function Keg(props){
             border: 2px solid black;
             background-color: ghostwhite;
             display: inline-block;
-            margin: 5%;
-            height: 100px;
-            width: 100px;
-            padding: 5%;
+            margin: 1%;
+            height: 5%;
+            width: 20%;
+            padding: 1%;
+            text-align:center;
           }
           h3 {
-            font-size: 2vw;
-            color: red;
+            color:red;
           }
         `}</style>
       <h3>{props.name}</h3>
@@ -24,7 +24,7 @@ function Keg(props){
       <hr/>
       <p>${props.price}/pint</p>
       <hr/>
-      <p>{props.alcoholContent}</p>
+      <p>{props.alcoholContent}% ABV</p>
     </div>
   );
 }
