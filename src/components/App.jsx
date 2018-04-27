@@ -6,18 +6,57 @@ import KegList from './KegList';
 import AddKegForm from './AddKegForm';
 import Error404 from './Error404';
 
-function App(){
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      kegList: [
+        {
+          name: 'Beer 1',
+          brand: 'Brand',
+          price: 5,
+          alcoholContent: 5.5,
+          pintsLeft:124
+        },
+        {
+          name: 'Beer 2',
+          brand: 'Brand',
+          price: 6,
+          alcoholContent: 7.9,
+          pintsLeft:124
+        },
+        {
+          name: 'Beer 3',
+          brand: 'Brand',
+          price: 4.5,
+          alcoholContent: 4.8,
+          pintsLeft:124
+        }
+      ]
+    };
+    this.handleNewKeg = this.handleNewKeg.bind(this);
+  }
+
+  handleNewKeg(keg) {
+    let newState = Object.assign({}, this.state.kegList);
+  }
+
+render() {
+
+
   return (
     <div>
       <Header />
       <Switch>
-        <Route exact path='/' component={KegList} />
+        <Route exact path='/' render={()=><KegList kegList={this.state.kegList} />} />
         <Route path='/add-keg' component={AddKegForm} />
         <Route component={Error404} />
       </Switch>
       <Footer />
     </div>
   );
+}
 }
 
 export default App;
