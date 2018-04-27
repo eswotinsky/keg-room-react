@@ -34,7 +34,7 @@ Keg.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  alcoholContent: PropTypes.string.isRequired,
+  alcoholContent: PropTypes.number.isRequired,
   pintsLeft: PropTypes.number.isRequired
 };
 

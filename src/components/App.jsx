@@ -39,24 +39,27 @@ class App extends React.Component {
   }
 
   handleNewKeg(keg) {
-    let newState = Object.assign({}, this.state.kegList);
+    let newKegList = [];
+    this.state.kegList.forEach(keg=>{
+      newKegList.push(Object.create(keg));
+    });
+    newKegList.push(keg);
+    this.setState({kegList: newKegList});
   }
 
-render() {
-
-
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path='/' render={()=><KegList kegList={this.state.kegList} />} />
-        <Route path='/add-keg' component={AddKegForm} />
-        <Route component={Error404} />
-      </Switch>
-      <Footer />
-    </div>
-  );
-}
+  render() {
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path='/' render={()=><KegList kegList={this.state.kegList} />} />
+          <Route path='/add-keg' render={()=><AddKegForm onNewKeg={this.handleNewKeg} />} />
+          <Route component={Error404} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
