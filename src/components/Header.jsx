@@ -1,5 +1,6 @@
 import React from 'react';
 import kegRoomLogo from '../assets/keg.jpg';
+import { Link } from 'react-router-dom';
 
 function Header(){
   return (
@@ -12,10 +13,11 @@ function Header(){
           }
           img {
             width:10%;
+            border-radius:40px;
           }
         `}
       </style>
-      <img src={kegRoomLogo} />
+      <Link to="/"><img src={kegRoomLogo} /></Link>
       <h1>The Keg Room</h1>
     </div>
   );
