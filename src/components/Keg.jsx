@@ -26,6 +26,7 @@ function Keg(props){
       <hr/>
       <p>${props.price}/pint</p>
       <p>{props.pintsLeft} pints left</p>
+      <button>Sell a pint</button>
     </div>
   );
 }

@@ -13,8 +13,8 @@ function AddKegForm(props){
     let newKeg = {
       name: _name.value,
       brand: _brand.value,
-      price: _price.value,
-      alcoholContent: _alcoholContent.value,
+      price: parseInt(_price.value),
+      alcoholContent: parseInt(_alcoholContent.value),
       pintsLeft: 124
     };
     props.onNewKeg(newKeg);
